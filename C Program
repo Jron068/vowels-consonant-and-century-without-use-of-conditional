@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main(){ 
+
+	  //Declaring a variable and data type as an char.
+    char in, lw, vowel;
+    int char_out;
+    
+    //Asking and reading the user input.
+    printf("Enter a Letter: ");
+    scanf(" %c", &in);
+    
+    // The process where the user input is equally to 'a'&&'e'&&'i'&&'o'&&'u' it will be equal to vowels (1).
+
+    //Lower the user input
+    lw = tolower(in); 
+    //The Output
+    printf("The %c is a %d\n", in, lw=='a'&&'e'&&'i'&&'o'&&'u'); 
+
+    //or. Another process.
+    //Declaring the vowels.
+    vowel = lw =='a'&&'e'&&'i'&&'o'&&'u';
+    //The Output.
+    char_out =( vowel && printf("The %c is vowels/1 \n", in)) || printf("The %c is consonant/0 \n", in); 
+    
+    //Getting What Century.
+    
+    //Declaring the variables.
+    int year, century, year_out, less_0;
+    
+    //Getting user input.
+    printf("Enter a Year: ");
+	  scanf("%d", &year);
+	
+  	//Calculating the century
+  	century=year/100;
+  	less_0 =century<=0;
+  	
+  	//The output.
+  	year_out=(less_0 && printf("The %d is Not Century.", year)) || printf("The %d is %d Century.", year, century);
+	
+    return 0;
+}
